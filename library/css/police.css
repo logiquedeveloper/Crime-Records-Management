@@ -1,0 +1,360 @@
+
+/*lets start off by creating some css variables */
+:Root{
+    --nav-color: #34434c;
+    --primary:#ddd;
+    --dark:#333;
+    --light: #fff;
+    --shadow: 0px 1px 5px rgba(104, 104, 104, 0.8);
+}
+body{
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+/*Global stylings*/
+.container{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+ul{
+    /*Because by default, unordered lists have margin and padding, so we set them to zero*/
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    background: #66ccee;
+    color: var(--light);
+    text-decoration: none;
+    border: 0;
+    padding: 0.5rem 1.3rem;
+}
+img{
+    max-width: 100%;
+}
+
+/*Navigation and header stylings*/
+header{
+    background-color: #35424a;
+    color: #fff;
+    padding-top: 30px;
+    border-bottom: 3px solid #66ccee;
+    min-height: 70px;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+header li{
+    display: inline;
+    list-style: none;
+    float: left;
+    padding: 0 20px 0 10px;
+}
+header #branding{
+    margin-bottom: 1rem;
+    float: left;
+}
+header #branding h1{
+    margin:0;
+}
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+header .highlight, header .current a{
+    color: #66ccee;
+    font-weight: bold;
+}
+header a:hover{
+    color: #ccc;
+    font-weight: bold;
+}
+
+/*Main showcase styles*/
+.wrapper-class{
+    display: grid;
+    grid-gap: 10px;
+}
+
+.top-container{
+    margin-bottom: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+            'top-box-a showcase showcase'
+            'top-box-b showcase showcase';
+}
+/*showcase*/
+.showcase{
+    grid-area: showcase;
+    min-height: 400px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start; /*set the content to start from the left */
+    justify-content: center; /*vertically align content to center because the flex direction is column*/
+    box-shadow: var(--shadow);
+}
+.showcase img {
+    margin-bottom: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.showcase h1{
+    color: var(--light);
+    margin-bottom: 0px;
+    font-size: 2.5rem;
+
+}
+.showcase p{
+    color: var(--light);
+    margin-top: 0px;
+    font-size: 1.3rem;
+
+}
+/*Boxes*/
+.boxes{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box{
+    text-align: center;
+    background: var(--primary);
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow);
+}
+/*top box*/
+.top-box{
+    display: grid;
+    align-items: center;
+    justify-items: center;/*align the content horizontally to the center*/
+    background: var(--primary);
+    padding: 1.5rem;
+}
+.top-box .news{
+    font-size: 1.5rem
+}
+.top-box-a{
+    grid-area: top-box-a;
+}
+.top-box-b{
+    grid-area: top-box-b;
+}
+/*******************************************************************
+LOGIN FORM STYLES
+******************************************************************/
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.wrapper .left_section{
+    background: var(--nav-color);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.wrapper .right_section{
+    flex: 1;
+}
+/*let's style the sign-in ID*/
+#sign-in{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+#sign-in form{
+    width: 80%;
+    padding-bottom: 2.0rem;
+}
+#sign-in h1{
+    color: #fff;
+    font-weight: bold;
+    margin-top: 5vh;
+}
+#sign-in .logo img{
+    width: 300px;
+}
+#sign-in label{
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+#sign-in i{
+    color: #fff;
+}
+#sign-in .text-input{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    margin-bottom: 1.1rem;
+    line-height: 1.3rem;
+    border: 2px solid #66ccee;
+}
+
+/*Buttons*/
+#sign-in .primary-btn{
+    width: 100%;
+}
+#sign-in .secondary-btn, .links, .or-rule{
+    width: 60%;
+}
+#sign-in .links a{
+    display: block;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-align:center;
+    font-size: 0.9rem;
+    color: #fff;
+}
+#sign-in .or-rule{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+#sign-in .or-rule .bar{
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #aaa;
+}
+#sign-in .or-rule span{
+    color: #ccc;
+    padding: 0 0.8rem;
+}
+.primary-btn{
+    display: block;
+    padding: 0.3rem 1rem;
+    line-height: 2.5rem;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #66ccee;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.primary-btn:hover{
+    background-color: #66aabb;
+}
+.secondary-btn{
+    display: block;
+    padding: 0.1rem 1rem;
+    line-height: 2.5rem;
+    background: #66aabb;
+    border: 1px solid #66ccee;
+    border-radius: 2px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-bottom: 2rem;
+}
+
+.secondary-btn:hover{
+    border: 1px solid #66ccee;
+}
+
+.right_section #showcase{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 80vh;
+}
+.right_section #showcase .showcase-text{
+    font-size: 2rem;
+    width: 100%;
+    color:#fff;
+    margin-bottom: 1.5rem;
+}
+.right_section #showcase .secondary-btn{
+    width: 60%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer styling*/
+#main-footer{
+    border-top: 3px solid #66ccee;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color:  #35424a;
+}
+#main-footer a{
+    color: #66ccee;
+    text-decoration: underline;
+}

@@ -10,6 +10,7 @@
                 <li><a href="#">Dashboard</a></li>
                 <li><a href="services.html">Admin</a></li>
                 <li><a href="services.html">Reports</a></li>
+                <li><a href="services.html">police</a></li>
                 <li><a href="<?php echo $home_url . 'logout.php'; ?>">Logout</a></li>
             </ul>
         </nav>

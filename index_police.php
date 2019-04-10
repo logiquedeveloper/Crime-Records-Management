@@ -25,7 +25,5 @@ include_once "nav_police.php";
 
 
 
-
-
      
 <?php echo include_once "includes/footer.php"; ?>

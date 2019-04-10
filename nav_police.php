@@ -7,8 +7,8 @@
             <ul>
                 <li class="current"><a href="<?php echo $home_url . 'index.php'; ?>">Home</a></li>
                 <li><a href="#">Dashboard</a></li>
-                <li><a href="myaccount.php">View Reports</a></li>
-                <li><a href="<?php echo $home_url . 'logout.php'; ?>">Logout</a></li>
+                <li><a href="#">View Reports</a></li>
+                <li><a href="#">Account</a></li>
             </ul>
         </nav>
     </div>

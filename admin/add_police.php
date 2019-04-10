@@ -9,8 +9,8 @@ include_once "includes/navigation.php"; ?>
 <div class="row mb-5">
   <div class="col-md-6 mx-auto">
     <div class="card card-body bg-light mt-5">
-      <h2>Add Police</h2>
-      <p>Please fill this form to register with us</p>
+      <h2 class="text-center">Add Police Officer</h2>
+      <p class="text-center">Please fill this form to register with us</p>
       <form action="" method="post">
         <div class="form-group">
             <label>Name:<sup>*</label>
